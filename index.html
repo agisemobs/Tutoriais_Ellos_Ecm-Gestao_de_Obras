@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Downloads Tutoriais - Ellos Ecm</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <img src="img/logo_prefeitura_contagem.jpg" alt="Prefeitura de Contagem" />
+    </div>
+
+    <div class="card">
+      <h1>Downloads de Tutoriais - Sistema de Obras</h1>
+      <p>
+        Selecione o documento desejado para realizar o download dos tutoriais e
+        materiais de apoio do sistema.
+      </p>
+
+      <div class="select-group">
+        <label for="arquivo">Documento disponível:</label>
+        <select id="arquivo">
+          <option value="">-- Selecione --</option>
+          <option value="arquivos_pdf/TUTORIAL PARA LANÇAMENTO DE MEDIÇÃO.pdf">
+            Tutorial – Lançamento de Medição.
+          </option>
+          <option
+            value="arquivos_pdf/TUTORIAL PARA LANÇAMENTO DE DIÁRIO DE OBRA.pdf"
+          >
+            Tutorial – Lançamento de Diário de Obra.
+          </option>
+          <option value="arquivos_pdf/TUTORIAL DE ASSINATURAS DIGITAIS ART.pdf">
+            Tutorial – Assinaturas Digitais dos ART's.
+          </option>
+        </select>
+      </div>
+
+      <a href="#" class="btn-download" onclick="baixarArquivo()">Baixar PDF</a>
+
+      <div class="footer">
+        Prefeitura de Contagem • Sistema de Gestão de Obras
+      </div>
+    </div>
+
+    <script>
+      function baixarArquivo() {
+        const select = document.getElementById("arquivo");
+        const url = select.value;
+
+        if (!url) {
+          alert("Selecione um arquivo para download.");
+          return;
+        }
+
+        window.open(url, "_blank");
+      }
+    </script>
+  </body>
+  <footer>
+    Developed by Bruna Braga<br />
+    Equipe AGI – Assessoria de Gestão e Inovação - Semobs / 2026.
+  </footer>
+</html>
