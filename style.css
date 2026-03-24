@@ -65,6 +65,7 @@ body {
 .header img {
     height: 120px;
     width: auto;
+    border-radius: 20px;
 }
 
 .header h1 {
