@@ -1,64 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Downloads Tutoriais - Ellos Ecm</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div class="header">
-      <img src="img/logo_prefeitura_contagem.jpg" alt="Prefeitura de Contagem" />
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutoriais - Sistema Ellos ECM</title>
+  <link rel="stylesheet" href="style_index.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,800;1,800&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet" />
+</head>
 
-    <div class="card">
-      <h1>Downloads de Tutoriais - Sistema de Obras</h1>
-      <p>
-        Selecione o documento desejado para realizar o download dos tutoriais e
-        materiais de apoio do sistema.
-      </p>
+<body>
 
-      <div class="select-group">
-        <label for="arquivo">Documento disponível:</label>
-        <select id="arquivo">
-          <option value="">-- Selecione --</option>
-          <option value="arquivos_pdf/TUTORIAL PARA LANÇAMENTO DE MEDIÇÃO.pdf">
-            Tutorial – Lançamento de Medição.
-          </option>
-          <option
-            value="arquivos_pdf/TUTORIAL PARA LANÇAMENTO DE DIÁRIO DE OBRA.pdf"
-          >
-            Tutorial – Lançamento de Diário de Obra.
-          </option>
-          <option value="arquivos_pdf/TUTORIAL DE ASSINATURAS DIGITAIS ART.pdf">
-            Tutorial – Assinaturas Digitais dos ART's.
-          </option>
-        </select>
+  <img src="img/logo_prefeitura_contagem.jpg" class="logo" alt="Logo Prefeitura de Contagem" />
+
+  <div class="header">
+    <h1>Sistema Ellos ECM</h1>
+    <p>Gestão de Obras da Prefeitura de Contagem</p>
+  </div>
+
+  <div class="container">
+    <main class="selection-container">
+      <h4 class="selection-title">
+        Aqui você encontra tutoriais que auxiliam no preenchimento e na navegação das informações no sistema de
+        contratos de obras da Prefeitura de Contagem.
+      </h4>
+
+      <div class="cards-container">
+
+        <div class="card">
+          <div class="card-icon">🏢</div>
+          <h3>Tutoriais - Contratada</h3>
+          <p>Destinado a empresas e profissionais responsáveis pela execução de obras e serviços.</p>
+          <button class="card-button" onclick="window.location.href='download_contratada.html'">Acessar</button>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🏛️</div>
+          <h3>Tutoriais - Contratante</h3>
+          <p>Destinado a coordenadores, fiscais, supervisores e demais colaboradores da Prefeitura de Contagem.</p>
+          <button class="card-button" onclick="window.location.href='download_contratante.html'">Acessar</button>
+        </div>
+
       </div>
 
-      <a href="#" class="btn-download" onclick="baixarArquivo()">Baixar PDF</a>
-
-      <div class="footer">
-        Prefeitura de Contagem • Sistema de Gestão de Obras
+      <div class="alerta-info">
+        <strong>📌 Importante:</strong> Selecione o tipo de tutorial de acordo com o seu perfil de acesso.
+        Os conteúdos variam conforme as permissões e funcionalidades disponíveis para cada perfil.
       </div>
-    </div>
+    </main>
+  </div>
 
-    <script>
-      function baixarArquivo() {
-        const select = document.getElementById("arquivo");
-        const url = select.value;
-
-        if (!url) {
-          alert("Selecione um arquivo para download.");
-          return;
-        }
-
-        window.open(url, "_blank");
-      }
-    </script>
-  </body>
   <footer>
     Developed by Bruna Braga<br />
     Equipe AGI – Assessoria de Gestão e Inovação - Semobs / 2026.
   </footer>
+
+</body>
 </html>
